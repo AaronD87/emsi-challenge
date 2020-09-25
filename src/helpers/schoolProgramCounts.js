@@ -1,15 +1,4 @@
-import React, { useEffect } from 'react'
-
-const Schools = (props) => {
-    const {
-        'school.name': schoolName,
-        'school.state': schoolState,
-        'school.city': schoolCity,
-        'school.admissions.admission_rate.overall': schoolAdmissions,
-        'latest.student.size': schoolStudentSize,
-        'latest.programs.cip_4_digit': programCount,
-    } = props.schools
-
+export const programCounts = (programCount) => {
     let undergraduateDegrees = 0
     let associateDegrees = 0
     let bachelorDegrees = 0
@@ -50,18 +39,4 @@ const Schools = (props) => {
                 break
         }
     }
-
-    return (
-        <div>
-            {schoolName}
-            {/* {schoolState}
-            {schoolCity}
-            {schoolAdmissions} */}
-            {/* {schoolStudentSize} */}
-            {/* {undergraduateDegrees} */}
-            {bachelorDegrees}
-        </div>
-    )
 }
-
-export default Schools
