@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react"
-import axios from "axios"
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
+import Schools from './components/Schools'
 
 function App() {
     const [data, setData] = useState([])
@@ -14,7 +15,7 @@ function App() {
                 setLoading(true)
                 const response = await axios.get(url)
                 if (response.status === 200) {
-                    setData(response.data)
+                    setData(response.data.results)
                 }
             } catch (error) {
                 throw error
@@ -25,13 +26,13 @@ function App() {
         fetchData()
     }, [url])
 
-    console.log(data)
+    const schoolData = data.map((school, i) => <Schools schools={school} key={i} />)
 
     return (
-      <>
-        {loading && <div className="App">Hello</div>}
-      </>
-    );
+      <div>
+        {schoolData}
+      </div>
+    )
 }
 
 export default App
