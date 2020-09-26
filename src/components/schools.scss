@@ -109,6 +109,10 @@ ul {
   margin-top: 0.4em;
 }
 
+.unavailable {
+  display: block;
+}
+
 .admission-rate-unavailable {
   grid-row-start: f;
   grid-row-end: g;
