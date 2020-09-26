@@ -35,8 +35,8 @@ const Schools = ({ schools }) => {
           </p>
           <img src={logo} className="logo" alt="logo" />
           {schoolStudentSize === null ? (
-            <div className="student-size-header">
-              <p> Student Size unavailable</p>
+            <div className="student-size-unavailable">
+              <p> Student Size: <p> unavailable </p> </p>
             </div>
           ) : (
             <p className="student-size-header"> Student Size: </p>
@@ -47,8 +47,8 @@ const Schools = ({ schools }) => {
             <p className="student-size"> {schoolStudentSize} </p>
           )}
           {schoolAdmissions === null ? (
-            <div className="admission-rate-progress-bar-wrapper">
-              <p> Admissions rates unavailable</p>
+            <div className="admission-rate-unavailable">
+              <p> Admissions Rate: unavailable </p>
             </div>
           ) : (
             <p className="admission-rate-header"> Admission Rate: </p>
