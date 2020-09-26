@@ -1,17 +1,20 @@
 language: node_js
 node_js:
-  - "stable"
+- stable
 cache:
   directories:
   - node_modules
 script:
-  - npm run build
+- npm run build
 install:
-  - yarn
+- yarn
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token: $github_token
+  github_token: "$github_token"
   local_dir: build
   on:
     branch: master
+env:
+  global:
+    secure: WPOp3nuHFfwJr4EEFhwkqDwUtdSuZXNN4udXt0UZ1SN3x/shVEptz/Yu1M52cvQdHwUDI3hr/EFF4ktlKX18G84jPN21IyFl8H70yuAZsP4RpP+bTY8L4cAjySQgXYYo2CnAsDbu91/jUzvYkcDiue1exBKiUoz7HsplJ8eqrLRqPyooiVDwMkaHUUbRLBpnIsGhHUdgOWPwGODHnPy92tuTAGcBjMi9rsyhS9a3bmscLxkH1qb5DfeF64N6y0YHI01gAkTUO7LuRM04IFEJOVeqovAHLb42Y4tdhyFgMaZ8HRGladaseF8ZHdppHMJPUEC4Rl/JKkL9Ui975B8VzD5YtybMLAuyYoaCbUnDK1Es8cggpr35S6d5mkv5AI+6TkFAm8kIwGL3QMWd3abQWqn5/eND9mbW8l2aNCWE2IVoc0/XQRNIgLvWl9SmGIJOM/Wh/h8AYtZYwDuIoup7TJXJONFiUIfNrtgoUD2DRX5poMMVdOOKjp8GWFwlx+6tUGtuZ2KtnQ7Xa2faXiLn5reOLQDqX8cJ+8+lHP9iiR5EH0JJ6iaEqU6mD+G12+rwlhg+nFFyBnWvok2mNE3MG/71iMxI5anG0UmNL311p37B6yhgaWCcHAZZPahdgrWWL1TYEG7vZfpebquLfcaBXKvWii1875q0ZkDYvTzhILM=
