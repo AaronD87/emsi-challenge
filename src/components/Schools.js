@@ -1,6 +1,6 @@
 import React from 'react'
 import useProgramCounts from '../hooks/useProgramCounts'
-import './schools.css'
+import './schools.scss'
 import logo from '../assets/university.svg'
 
 const Schools = ({ schools }) => {
@@ -59,7 +59,7 @@ const Schools = ({ schools }) => {
             <div className="admission-rate-progress-bar-wrapper">
               <p className="admission-rate">
                 {' '}
-                {Math.round(schoolAdmissions * 100)}%{' '}
+                {Math.round(schoolAdmissions * 100)}%
               </p>
               <progress
                 value={Math.round(schoolAdmissions * 100)}
