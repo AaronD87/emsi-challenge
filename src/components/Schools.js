@@ -25,7 +25,7 @@ const Schools = ({ schools }) => {
   } = useProgramCounts(programCount)
 
   return (
-    <ul className="wrapper">
+    <ul>
       <li className="card">
         <section className="upper-card-wrapping">
           <h2 className="school-title">{schoolName}</h2>
