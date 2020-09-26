@@ -1,67 +1,48 @@
-import React, { useEffect } from 'react'
+import React from 'react'
+import useProgramCounts from '../hooks/useProgramCounts'
 
-const Schools = (props) => {
-    const {
-        'school.name': schoolName,
-        'school.state': schoolState,
-        'school.city': schoolCity,
-        'school.admissions.admission_rate.overall': schoolAdmissions,
-        'latest.student.size': schoolStudentSize,
-        'latest.programs.cip_4_digit': programCount,
-    } = props.schools
+const Schools = ({ schools }) => {
+  const {
+    'school.name': schoolName,
+    'school.state': schoolState,
+    'school.city': schoolCity,
+    'school.admissions.admission_rate.overall': schoolAdmissions,
+    'latest.student.size': schoolStudentSize,
+    'latest.programs.cip_4_digit': programCount,
+  } = schools
 
-    let undergraduateDegrees = 0
-    let associateDegrees = 0
-    let bachelorDegrees = 0
-    let postBaccalaureateCertificates = 0
-    let mastersDegrees = 0
-    let doctoralDegrees = 0
-    let firstProfessionalDegrees = 0
-    let graduateProfessionalCertificates = 0
+  const {
+    undergraduateDegreeCount,
+    associateDegreeCount,
+    bachelorDegreeCount,
+    postBaccalaureateCertificateCount,
+    mastersDegreeCount,
+    doctoralDegreeCount,
+    firstProfessionalDegreeCount,
+    graduateProfessionalCertificateCount,
+  } = useProgramCounts(programCount)
 
-    for (let i = 0; i < programCount.length; i++) {
-        switch (programCount[i].credential.level) {
-            case 1:
-                undergraduateDegrees++
-                break
-            case 2:
-                associateDegrees++
-                break
-            case 3:
-                bachelorDegrees++
-                break
-            case 4:
-                postBaccalaureateCertificates++
-                break
-            case 5:
-                mastersDegrees++
-                break
-            case 6:
-                doctoralDegrees++
-                break
-            case 7:
-                firstProfessionalDegrees++
-                break
-            case 8:
-                graduateProfessionalCertificates++
-                break
-            default:
-                console.log('degree not found')
-                break
-        }
-    }
-
-    return (
-        <div>
-            {schoolName}
-            {/* {schoolState}
+  return (
+    <div>
+      {schoolName}
+      {/* {schoolState}
             {schoolCity}
             {schoolAdmissions} */}
-            {/* {schoolStudentSize} */}
-            {/* {undergraduateDegrees} */}
-            {bachelorDegrees}
-        </div>
-    )
+      {/* {schoolStudentSize} */}
+      {associateDegreeCount > 0 ? (
+        <p> Associate Degrees: {associateDegreeCount} </p>
+      ) : (
+        ''
+      )}
+      {bachelorDegreeCount > 0 ? (
+        <p> Bachelor Degrees: {bachelorDegreeCount} </p>
+      ) : (
+        ''
+      )}
+      {/* {undergraduateDegreeCount} */}
+      {/* {bachelorDegrees} */}
+    </div>
+  )
 }
 
 export default Schools
