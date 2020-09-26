@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eeeeee;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-gap: 30px 0;
+  place-items: center;
+  margin: 30px auto 0 auto;
+}
+
+.card {
+  display: grid;
+  height: 420px;
+  width: 500px;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.upper-card-wrapping {
+  display: grid;
+  height: 160px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas:
+    "a b b"
+    "a c ."
+    "a d f"
+    "a e g"
+}
+img {
+  width: 160px;
+  height: 160px;
+}
+ul {
+  list-style-type: none;
+}
+.inside {
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-top: 30px;
+  padding-left: 165px;
+  justify-content: flex-start;
+  height: 395px;
+  border-radius: 5px;
+  background-color: #fff
+}
+
+.school-title {
+  grid-area: b;
+  font-size: 1.25rem;
+  margin: 30px 0px 10px 0px;
+  font-weight: bold;
+}
+
+.city-state {
+  grid-area: c;
+  background-color: #bbd9e6;
+  display: flex;
+  width: 100%;
+  height: 25px;
+  border-radius: 5px;
+  padding-left: 20px;
+  place-items: center;
+}
+
+.logo {
+  grid-area: a;
+}
+
+.student-size-header {
+  grid-area: d;
+  margin-top: 0.4em;
+}
+
+.student-size {
+  grid-area: e;
+  color: purple;
+  font-weight: bold;
+  margin-bottom: 1.25rem;
+}
+
+.admission-rate-header {
+  grid-area: f;
+  margin-top: 0.4em;
+}
+
+.admission-rate-progress-bar-wrapper {
+  grid-area: g;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.3em;
+  height: 55%;
+}
+
+.admission-rate-progress-bar {
+  margin-bottom: 0.3em;
+  height: 50%;
+}
+
+.admission-rate {
+  font-weight: bold;
+  color: purple;
+  margin-bottom: 0.3em;
+}
+
+progress {
+  width: 100px;
+  margin-left: 0.5rem;
+}
+
+.degree-counts {
+  padding-top: 0.4rem;
+}
+
+.program-count-header {
+  font-weight: bold;
+}
+
+.lower-card-wrapping {
+  margin: 1rem 0 0 2.5rem;
+}
+
+hr {
+  width: 90%;
+  margin: 0.3rem auto 0 auto;
+}
+
+progress {
+  border-radius: 20px;
+}
+
+progress[value] {
+  -webkit-appearance: none;
+  appearance: none;
+  
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: lightgrey;
+  color: blue;
+   border-radius: 20px;
+}
+
+progress::-webkit-progress-value {
+  background-color: #bbd9e6;
+  border-radius: 20px;
+}
+
+@media only screen and (max-width: 800px) {
+  .wrapper {
+    width: 100vw;
+  }
+}
+
+@media only screen and (min-width: 2360px) {
+  .wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
+  }
+}

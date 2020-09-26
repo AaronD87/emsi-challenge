@@ -9,7 +9,7 @@ function App() {
   const { loading, data } = useFetch(url)
 
   return (
-    <div>
+    <div className="wrapper">
       {loading ? (
         <p>Loading...</p>
       ) : (

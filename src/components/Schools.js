@@ -1,5 +1,7 @@
 import React from 'react'
 import useProgramCounts from '../hooks/useProgramCounts'
+import './schools.css'
+import logo from '../assets/university.svg'
 
 const Schools = ({ schools }) => {
   const {
@@ -10,8 +12,6 @@ const Schools = ({ schools }) => {
     'latest.student.size': schoolStudentSize,
     'latest.programs.cip_4_digit': programCount,
   } = schools
-
-  console.log(12)
 
   const {
     undergraduateDegreeCount,
@@ -29,31 +29,102 @@ const Schools = ({ schools }) => {
       <li className="card">
         <section className="upper-card-wrapping">
           <h2 className="school-title">{schoolName}</h2>
-          <p className="city-state"> {schoolCity}, {schoolState}</p>
-          <img src="https://foroakcliff.org/wp-content/uploads/2016/05/placeholder-160x160.png" className="logo" alt="logo"/>
-          <p className="student-size-header"> Student Size: </p>
-          <p className="student-size"> {schoolStudentSize} </p>
-          <p className="admission-rate-header"> Admission Rate: </p>
-          <div className="admission-rate-progress-bar-wrapper">
-            <p className="admission-rate"> {Math.round(schoolAdmissions * 100)}% </p>
-            <progress value={Math.round(schoolAdmissions * 100)} max="100" className="admission-rate-progress-bar"></progress>
-          </div>
-        </section>
-    
-    <hr />
-    
-        <section className="lower-card-wrapping">
-          <p className="program-count-header">
-            Available Program Counts: 
+          <p className="city-state">
+            {' '}
+            {schoolCity}, {schoolState}
           </p>
-          {undergraduateDegreeCount && <p className="degree-counts"> Undergraduate Degree: <strong>{undergraduateDegreeCount}</strong></p>}
-          <p className="degree-counts"> Associate Degree: <strong>{associateDegreeCount}</strong></p>
-          <p className="degree-counts"> Bachelors Degree: <strong>{bachelorDegreeCount}</strong></p>
-          <p className="degree-counts"> Post Baccalaureate Certificate: <strong>{postBaccalaureateCertificateCount}</strong></p>
-          <p className="degree-counts"> Masters Degree: <strong>{mastersDegreeCount}</strong></p>
-          <p className="degree-counts"> Doctoral Degree: <strong>{doctoralDegreeCount}</strong></p>
-          <p className="degree-counts"> First Professional Degree: <strong>{firstProfessionalDegreeCount}</strong></p>
-          <p className="degree-counts"> Graduate/Professional Certificate: <strong>{graduateProfessionalCertificateCount}</strong></p>
+          <img src={logo} className="logo" alt="logo" />
+          {schoolStudentSize === null ? (
+            <div className="student-size-header">
+              <p> Student Size unavailable</p>
+            </div>
+          ) : (
+            <p className="student-size-header"> Student Size: </p>
+          )}
+          {schoolStudentSize === null ? (
+            ''
+          ) : (
+            <p className="student-size"> {schoolStudentSize} </p>
+          )}
+          {schoolAdmissions === null ? (
+            <div className="admission-rate-progress-bar-wrapper">
+              <p> Admissions rates unavailable</p>
+            </div>
+          ) : (
+            <p className="admission-rate-header"> Admission Rate: </p>
+          )}
+          {schoolAdmissions === null ? (
+            ''
+          ) : (
+            <div className="admission-rate-progress-bar-wrapper">
+              <p className="admission-rate">
+                {' '}
+                {Math.round(schoolAdmissions * 100)}%{' '}
+              </p>
+              <progress
+                value={Math.round(schoolAdmissions * 100)}
+                max="100"
+                className="admission-rate-progress-bar"
+              ></progress>
+            </div>
+          )}
+        </section>
+
+        <hr />
+
+        <section className="lower-card-wrapping">
+          <p className="program-count-header">Available Program Counts:</p>
+          {undergraduateDegreeCount > 0 && (
+            <p className="degree-counts">
+              {' '}
+              Undergraduate Degree: <strong>{undergraduateDegreeCount}</strong>
+            </p>
+          )}
+          {associateDegreeCount > 0 && (
+            <p className="degree-counts">
+              {' '}
+              Associate Degree: <strong>{associateDegreeCount}</strong>
+            </p>
+          )}
+          {bachelorDegreeCount > 0 && (
+            <p className="degree-counts">
+              {' '}
+              Bachelors Degree: <strong>{bachelorDegreeCount}</strong>
+            </p>
+          )}
+          {postBaccalaureateCertificateCount > 0 && (
+            <p className="degree-counts">
+              {' '}
+              Post Baccalaureate Certificate:{' '}
+              <strong>{postBaccalaureateCertificateCount}</strong>
+            </p>
+          )}
+          {mastersDegreeCount > 0 && (
+            <p className="degree-counts">
+              {' '}
+              Masters Degree: <strong>{mastersDegreeCount}</strong>
+            </p>
+          )}
+          {doctoralDegreeCount > 0 && (
+            <p className="degree-counts">
+              {' '}
+              Doctoral Degree: <strong>{doctoralDegreeCount}</strong>
+            </p>
+          )}
+          {firstProfessionalDegreeCount > 0 && (
+            <p className="degree-counts">
+              {' '}
+              First Professional Degree:{' '}
+              <strong>{firstProfessionalDegreeCount}</strong>
+            </p>
+          )}
+          {graduateProfessionalCertificateCount > 0 && (
+            <p className="degree-counts">
+              {' '}
+              Graduate/Professional Certificate:{' '}
+              <strong>{graduateProfessionalCertificateCount}</strong>
+            </p>
+          )}
         </section>
       </li>
     </ul>
