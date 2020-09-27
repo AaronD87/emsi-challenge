@@ -9,7 +9,7 @@ function App() {
   const { loading, data } = useFetch(url)
 
   return (
-    <div className="wrapper">
+    <main className="wrapper">
       {loading ? (
         <p>Loading...</p>
       ) : (
@@ -19,19 +19,19 @@ function App() {
       )}
 
       <div>
-        Icons made by{' '}
+        Icons made by
         <a
           href="https://www.flaticon.com/authors/pixel-perfect"
           title="Pixel perfect"
         >
           Pixel perfect
-        </a>{' '}
-        from{' '}
+        </a>
+        from
         <a href="https://www.flaticon.com/" title="Flaticon">
           www.flaticon.com
         </a>
       </div>
-    </div>
+    </main>
   )
 }
 
