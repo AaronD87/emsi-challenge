@@ -24,8 +24,6 @@ const Schools = ({ schools }) => {
     graduateProfessionalCertificateCount
   } = useProgramCounts(programCount)
 
-  console.log(12)
-
   return (
     <ul>
       <li className="card">
@@ -46,7 +44,7 @@ const Schools = ({ schools }) => {
           {schoolStudentSize === null ? (
             ''
           ) : (
-            <p className="student-size"> {schoolStudentSize} </p>
+            <p className="student-size"> {schoolStudentSize.toLocaleString()} </p>
           )}
           {schoolAdmissions === null ? (
             <div className="admission-rate-unavailable">
