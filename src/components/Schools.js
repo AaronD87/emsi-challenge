@@ -21,7 +21,7 @@ const Schools = ({ schools }) => {
     mastersDegreeCount,
     doctoralDegreeCount,
     firstProfessionalDegreeCount,
-    graduateProfessionalCertificateCount
+    graduateProfessionalCertificateCount,
   } = useProgramCounts(programCount)
 
   return (
@@ -36,7 +36,13 @@ const Schools = ({ schools }) => {
           <img src={logo} className="logo" alt="logo" />
           {schoolStudentSize === null ? (
             <div className="student-size-unavailable">
-              <p> Student Size: <span className="unavailable"> unavailable </span> </p>
+              <p>
+                {' '}
+                Student Size: <span className="unavailable">
+                  {' '}
+                  unavailable{' '}
+                </span>{' '}
+              </p>
             </div>
           ) : (
             <p className="student-size-header"> Student Size: </p>
@@ -44,7 +50,10 @@ const Schools = ({ schools }) => {
           {schoolStudentSize === null ? (
             ''
           ) : (
-            <p className="student-size"> {schoolStudentSize.toLocaleString()} </p>
+            <p className="student-size">
+              {' '}
+              {schoolStudentSize.toLocaleString()}{' '}
+            </p>
           )}
           {schoolAdmissions === null ? (
             <div className="admission-rate-unavailable">
