@@ -44,7 +44,7 @@ const Schools = ({ schools }) => {
           {schoolStudentSize === null ? (
             ''
           ) : (
-            <p className="student-size"> {schoolStudentSize.toLocaleString()} </p>
+            <p className="student-size"> {schoolStudentSize} </p>
           )}
           {schoolAdmissions === null ? (
             <div className="admission-rate-unavailable">

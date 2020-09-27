@@ -37,7 +37,7 @@ body {
 
 .upper-card-wrapping {
   display: grid;
-  height: 160px;
+  height: 10em;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 1fr);
   grid-template-areas:
@@ -177,7 +177,66 @@ progress::-webkit-progress-value {
 
 @media only screen and (max-width: 50em) {
   .wrapper {
-    width: 100vw;
+    width: 90vw;
+    justify-content: center;
+  }
+
+  .card {
+    width: 20em;
+  }
+
+  .logo {
+    margin-right: 0.5em;
+  }
+
+  .student-size {
+    grid-area: e;
+    margin-bottom: 0;
+    align-self: flex-start;
+  }
+
+  .admission-rate-progress-bar {
+    margin-top: 0.3em;
+  }
+
+  .admission-rate-header {
+    align-self: flex-end;
+  }
+
+  .admission-rate-progress-bar-wrapper {
+    align-self: center;
+  }
+
+  .school-title {
+    font-size: 1.25rem;
+    margin: 0.5em 1em 0.6em 0;
+    font-weight: bold;
+  }
+
+  .admission-rate-unavailable {
+    grid-area: f;
+  }
+
+  .student-size-unavailable {
+    grid-column-start: d;
+    grid-column-end: e;
+    align-self: center;
+  }
+
+  .unavailable {
+    display: inline;
+  }
+
+  .upper-card-wrapping {
+    height: 11.9em;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas:
+      'a b b'
+      'a c c'
+      'a d d'
+      'a e e'
+      'a f f'
+      'a g g';
   }
 }
 
