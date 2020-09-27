@@ -1,3 +1,45 @@
+## Emsi Code Challenge
+
+This project is for interviewing at EMSI, below you will find installation instructions and a recap of project guidelines. This project was created with React, Axios, NPM, SCSS, Prettier and Travis CI
+
+## Installation Instructions
+
+Before starting the project be sure to have your own API key from [College Scorecard](https://collegescorecard.ed.gov/data/documentation/). You will be using this to create a .env file in the root of the project following the .env.example file. 
+
+```
+$ cd emsi-challenge
+$ npm i
+$ npm start
+$ open your browser and go to localhost:3000
+```
+
+You may also visit the deployed project [here](https://aarond87.github.io/emsi-challenge).
+
+## Project Guidelines
+
+In this project, we want you to recreate a React App that displays institutions’ information. Attached is an image mockup of what the final product will look like.
+
+Your goal is to recreate the mockup to the best of your ability. We expect you to use React, but you are free to use whatever packages or methods of styling that you wish. However, you shouldn’t use any existing component library.
+
+Include the first 100 resultant schools for your query. You need not include more than this.
+
+## Requirements
+
+- You must put your code on to GitHub. We will review it from there.
+- Use small commits to git so that we can see how you’ve developed your solution.
+- Follow good coding practices, and add comments if necessary for clarity.
+- You must use React to develop the project.
+- Please include a `README.md` file that outlines how to run your project, and any additional notes you may have.
+
+## Evaluation Criteria
+
+- How readable your code is
+- How close the final product is to the mockup (we aren't expecting by-the-pixel perfection)
+- How your solution handles the API
+- How well you talk through your decisions in code review
+
+## The following is included with Create React App
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
