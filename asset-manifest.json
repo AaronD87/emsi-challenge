@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/emsi-challenge/static/css/main.196c7854.chunk.css",
+    "main.js": "/emsi-challenge/static/js/main.fc828d39.chunk.js",
+    "main.js.map": "/emsi-challenge/static/js/main.fc828d39.chunk.js.map",
+    "runtime-main.js": "/emsi-challenge/static/js/runtime-main.57aa10eb.js",
+    "runtime-main.js.map": "/emsi-challenge/static/js/runtime-main.57aa10eb.js.map",
+    "static/js/2.62d10953.chunk.js": "/emsi-challenge/static/js/2.62d10953.chunk.js",
+    "static/js/2.62d10953.chunk.js.map": "/emsi-challenge/static/js/2.62d10953.chunk.js.map",
+    "index.html": "/emsi-challenge/index.html",
+    "precache-manifest.288b67ca7a5714c08fd6ccfacafaff43.js": "/emsi-challenge/precache-manifest.288b67ca7a5714c08fd6ccfacafaff43.js",
+    "service-worker.js": "/emsi-challenge/service-worker.js",
+    "static/css/main.196c7854.chunk.css.map": "/emsi-challenge/static/css/main.196c7854.chunk.css.map",
+    "static/js/2.62d10953.chunk.js.LICENSE.txt": "/emsi-challenge/static/js/2.62d10953.chunk.js.LICENSE.txt",
+    "static/media/university.svg": "/emsi-challenge/static/media/university.22792d78.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.57aa10eb.js",
+    "static/js/2.62d10953.chunk.js",
+    "static/css/main.196c7854.chunk.css",
+    "static/js/main.fc828d39.chunk.js"
+  ]
+}
